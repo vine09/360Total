@@ -1,0 +1,44 @@
+--SN:01
+--Date and Time:2018-8-23 15:21
+--Tester:Slot1---Ver1.2.0.69
+--OperatorID:
+--CycleTime:39
+--TestResult:
+测试项目	测试名称        	测量值	下限值	上限值	测试结果
+通信    	启动自动化测试  	FAIL  	PASS  	PASS  	FAIL    
+版本    	查询MCU-APP版本 	      	V1.0  	V1.0  	FAIL    
+版本    	查询MCU-BOOT版本	      	V1.0  	V1.0  	FAIL    
+        	                	      	      	      	        
+
+[测试名称]      	[TestItem ITEM]	[通道]          	[设置参数]	[下限值]	[上限值]	[单位]	[测量值]	[结果]	[测试时间]	[备注]	[测试项目]	 
+打开电源        	DOAction       	B+              	1         	        	        	      	        	Done  	0.010000  	      	ACC_IO    	1
+ACC置高         	DOAction       	ACC             	1         	        	        	      	        	Done  	0.029000  	      	ACC_IO    	1
+退出自动化测试  	CMD_360        	停止测试        	1000      	        	PASS    	String	FAIL    	PASS  	2.137000  	      	通信      	1
+延时            	Delay          	                	3         	        	        	      	        	Done  	3.028000  	      	          	1
+启动自动化测试  	CMD_360        	握手命令        	1000      	PASS    	PASS    	String	FAIL    	FAIL  	18.022000 	      	通信      	1
+延时            	Delay          	                	5         	        	        	      	        	Done  	5.030000  	      	          	1
+查询MCU-APP版本 	CMD_360        	获取MCU-APP版本 	1000      	V1.0    	V1.0    	String	        	FAIL  	5.331000  	      	版本      	1
+查询MCU-BOOT版本	CMD_360        	获取MCU-BOOT版本	1000      	V1.0    	V1.0    	String	        	FAIL  	5.321000  	      	版本      	1
+
+通信信息:发送停止测试:F021000000010020
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送握手命令:F001000000010000
+反馈:
+发送获取MCU-APP版本:F004000000010005
+反馈:
+发送获取MCU-APP版本:F004000000010005
+反馈:
+发送获取MCU-BOOT版本:F006000000010007
+反馈:
+发送获取MCU-BOOT版本:F006000000010007
+反馈:

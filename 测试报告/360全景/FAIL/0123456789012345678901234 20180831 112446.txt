@@ -1,0 +1,17 @@
+--SN:0123456789012345678901234
+--Date and Time:2018-8-31 11:24
+--Tester:Slot1---Ver1.2.0.69
+--OperatorID:
+--CycleTime:6
+--TestResult:
+
+[测试名称]    	[TestItem ITEM]	[通道]  	[设置参数]	[下限值]	[上限值]	[单位]	[测量值] 	[结果]	[测试时间]	[备注]	[测试项目]	 
+打开电源      	DOAction       	B+      	1         	        	        	      	         	Done  	0.011000  	      	ACC_IO    	1
+ACC置高       	DOAction       	ACC     	1         	        	        	      	         	Done  	0.029000  	      	ACC_IO    	1
+延时          	Delay          	        	2         	        	        	      	         	Done  	2.028000  	      	          	1
+测试工作电流  	Static Current 	GDM8341 	Curr      	100     	500     	ma    	251.20000	PASS  	0.638000  	      	工作电流  	 
+测试工作电压  	Static Current 	GDM8341 	Vol       	11.3    	12.7    	V     	11.54400 	PASS  	0.639000  	      	工作电压  	 
+退出自动化测试	CMD_360        	停止测试	1000      	        	PASS    	String	FAIL     	PASS  	2.140000  	      	通信      	1
+
+通信信息:发送停止测试:F021000000010020
+反馈:

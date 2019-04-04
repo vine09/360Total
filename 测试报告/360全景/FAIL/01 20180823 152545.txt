@@ -1,0 +1,43 @@
+--SN:01
+--Date and Time:2018-8-23 15:25
+--Tester:Slot1---Ver1.2.0.69
+--OperatorID:
+--CycleTime:14
+--TestResult:
+测试项目	测试名称        	测量值  	下限值	上限值	测试结果
+版本    	查询MCU-APP版本 	09040300	V1.0  	V1.0  	FAIL    
+版本    	查询MCU-BOOT版本	09040300	V1.0  	V1.0  	FAIL    
+版本    	查询ARM-APP版本 	        	V1.0  	V1.0  	FAIL    
+版本    	查询ARM算法版本 	02060200	V1.0  	V1.0  	FAIL    
+        	                	        	      	      	        
+
+[测试名称]      	[TestItem ITEM]	[通道]          	[设置参数]  	[下限值]	[上限值]	[单位]	[测量值]	[结果]	[测试时间]	[备注]	[测试项目]	 
+打开电源        	DOAction       	B+              	1           	        	        	      	        	Done  	0.018000  	      	ACC_IO    	1
+ACC置高         	DOAction       	ACC             	1           	        	        	      	        	Done  	0.030000  	      	ACC_IO    	1
+退出自动化测试  	CMD_360        	停止测试        	1000        	        	PASS    	String	PASS    	PASS  	0.337000  	      	通信      	1
+延时            	Delay          	                	3           	        	        	      	        	Done  	3.028000  	      	          	1
+启动自动化测试  	CMD_360        	握手命令        	1000        	PASS    	PASS    	String	PASS    	PASS  	0.339000  	      	通信      	1
+延时            	Delay          	                	5           	        	        	      	        	Done  	5.030000  	      	          	1
+查询MCU-APP版本 	CMD_360        	获取MCU-APP版本 	1000        	V1.0    	V1.0    	String	09040300	FAIL  	1.733000  	      	版本      	1
+查询MCU-BOOT版本	CMD_360        	获取MCU-BOOT版本	1000        	V1.0    	V1.0    	String	09040300	FAIL  	1.723000  	      	版本      	1
+查询ARM-APP版本 	CMD_360        	获取ARM-APP版本 	Differential	V1.0    	V1.0    	String	        	FAIL  	0.716000  	      	版本      	1
+查询ARM算法版本 	CMD_360        	获取ARM算法版本 	1000        	V1.0    	V1.0    	String	02060200	FAIL  	0.350000  	      	版本      	1
+
+通信信息:发送停止测试:F021000000010020
+反馈:F0000000000102210123
+发送握手命令:F001000000010000
+反馈:F0000000000102010103
+发送获取MCU-APP版本:F004000000010005
+反馈:F0050000000104090403000E
+发送获取MCU-APP版本:F004000000010005
+反馈:F0050000000104090403000E
+发送获取MCU-BOOT版本:F006000000010007
+反馈:F0070000000104090403000C
+发送获取MCU-BOOT版本:F006000000010007
+反馈:F0070000000104090403000C
+发送获取ARM-APP版本:F009000000010008
+反馈:F00A
+发送获取ARM-APP版本:F009000000010008
+反馈:F00A
+发送获取ARM算法版本:F00B00000001000A
+反馈:F00C0000000104020602000F
